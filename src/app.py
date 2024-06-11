@@ -13,7 +13,6 @@ from huggingface_hub import ModelCard
 OUTDIR="./data"
 st.set_page_config(layout="wide")
 
-@st.cache_resource
 def save_model_headers(tag,
     limit=5):
     """
@@ -72,7 +71,7 @@ def _get_model_header_proportions(headers):
 
     return headers_dict
 
-def _clean_model_headers(headers, top_k=10):
+def _clean_model_headers(headers, top_k=25):
     """Clean up headers and return metrics on model card coverage"""
 
     # Get proportion of models with each header (limit to top_k)
@@ -127,7 +126,10 @@ def create_dashboard():
     """
     Handles user input 
     """
-    user_input = st.sidebar.multiselect("Search Huggingface models", options=["medical", "biomedical", "clinical"])
+    if not os.path.isdir(OUTDIR): 
+        os.makedirs(OUTDIR)
+
+    user_input = st.sidebar.multiselect("Search Huggingface models", options=["medical", "biomedical", "clinical"], default=["biomedical"])
 
     for input_tag in user_input:
         if not os.path.exists(os.path.join(OUTDIR,f"{input_tag}.json")):
