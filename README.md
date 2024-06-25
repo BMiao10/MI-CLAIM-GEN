@@ -1,7 +1,7 @@
-# MI-CLAIM-2024
-Updating the Minimum Information about CLinical Artificial Intelligence (MI-CLAIM) checklist for generative modeling research 
+# MI-CLAIM-GEN
+Updating the Minimum Information about CLinical Artificial Intelligence Checklist for Generative Modeling Research (MI-CLAIM-GEN)
 
-## About MI-CLAIM-2024
+## About MI-CLAIM-GEN
 Recent advances in generative models, including large language models (LLMs), vision language models (VLMs), and diffusion models, have accelerated the field of natural language and image processing in medicine and marked a significant paradigm shift in how biomedical models can be developed and deployed. While these models are highly adaptable to new tasks, scaling and evaluating their usage presents new challenges not addressed in previous frameworks. In particular, the ability of these models to produce useful outputs with little to no specialized training data (“zero-” or “few-shot” approaches), as well as the open-ended nature of their outputs, necessitate the development of updated guidelines in using and evaluating these models.
 
 The MI-CLAIM checklist, originally developed in 2020, provided a set of six steps with guidelines on the minimum information necessary to encourage transparent, reproducible research for artificial intelligence (AI) in medicine. 
